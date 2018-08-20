@@ -88,7 +88,7 @@
 <meta property="og:description" content="Consul 是 HashiCorp 公司推出的开源工具，用于实现分布式系统的服务发现与配置。与其他分布式服务注册与发现的方案，Consul的方案更“一站式”，内置了服务注册与发现框架、分布一致性协议实现（基于Raft算法）、健康检查、允许HTTP和DNS协议调用API存储Key/Value、多数据中心，不再需要依赖其他工具（比如ZooKeeper等），使用 GOSSIP 协议管理成员和广播消息并">
 <meta property="og:locale" content="char369@hotmail.com">
 <meta property="og:image" content="https://www.consul.io/assets/images/consul-arch-420ce04a.png">
-<meta property="og:updated_time" content="2018-08-01T14:35:13.115Z">
+<meta property="og:updated_time" content="2018-08-06T13:12:13.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Consul简介">
 <meta name="twitter:description" content="Consul 是 HashiCorp 公司推出的开源工具，用于实现分布式系统的服务发现与配置。与其他分布式服务注册与发现的方案，Consul的方案更“一站式”，内置了服务注册与发现框架、分布一致性协议实现（基于Raft算法）、健康检查、允许HTTP和DNS协议调用API存储Key/Value、多数据中心，不再需要依赖其他工具（比如ZooKeeper等），使用 GOSSIP 协议管理成员和广播消息并">
@@ -304,7 +304,7 @@
       
         <p>Consul 是 HashiCorp 公司推出的开源工具，用于实现分布式系统的服务发现与配置。与其他分布式服务注册与发现的方案，Consul的方案更“一站式”，内置了服务注册与发现框架、分布一致性协议实现（基于Raft算法）、健康检查、允许HTTP和DNS协议调用API存储Key/Value、多数据中心，不再需要依赖其他工具（比如ZooKeeper等），使用 GOSSIP 协议管理成员和广播消息并且支持 ACL 访问控制。使用起来也较 为简单。Consul使用Go语言编写，因此具有天然可移植性(支持多平台)；安装包仅包含一个可执行文件，方便部署，与Docker等轻量级容器可无缝配合 。</p>
 <a id="more"></a>
-<p>##1 Consul简介<br>Consul 是 HashiCorp 公司推出的开源工具，用于实现分布式系统的服务发现与配置。与其他分布式服务注册与发现的方案，Consul的方案更“一站式”，内置了服务注册与发现框架、分布一致性协议实现（基于Raft算法）、健康检查、允许HTTP和DNS协议调用API存储Key/Value、多数据中心，不再需要依赖其他工具（比如ZooKeeper等），使用 GOSSIP 协议管理成员和广播消息并且支持 ACL 访问控制。使用起来也较 为简单。Consul使用Go语言编写，因此具有天然可移植性(支持多平台)；安装包仅包含一个可执行文件，方便部署，与Docker等轻量级容器可无缝配合 。</p>
+<h2 id="1-Consul简介"><a href="#1-Consul简介" class="headerlink" title="1 Consul简介"></a>1 Consul简介</h2><p>Consul 是 HashiCorp 公司推出的开源工具，用于实现分布式系统的服务发现与配置。与其他分布式服务注册与发现的方案，Consul的方案更“一站式”，内置了服务注册与发现框架、分布一致性协议实现（基于Raft算法）、健康检查、允许HTTP和DNS协议调用API存储Key/Value、多数据中心，不再需要依赖其他工具（比如ZooKeeper等），使用 GOSSIP 协议管理成员和广播消息并且支持 ACL 访问控制。使用起来也较 为简单。Consul使用Go语言编写，因此具有天然可移植性(支持多平台)；安装包仅包含一个可执行文件，方便部署，与Docker等轻量级容器可无缝配合 。</p>
 <p>##2.Consul的构成</p>
 <p>agent(代理)：运行于Consul集群每个节点中的长连接守护进程。它可以设置为client模式或者server模式。所有的代理都可以通过DNS或HTTP进行相互联系，并负责运行时检查和保持服务间同步。</p>
 <p>client(客户端)：转发所有的请求到server。客户端本身是无状态的，它自己后台会加入”LAN gossip pool”。它只占用很少的资源，并且只消耗很少的带宽。</p>
@@ -418,8 +418,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -434,7 +443,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -447,7 +456,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -470,6 +479,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Consul简介"><span class="nav-number">1.</span> <span class="nav-text">1 Consul简介</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
